@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { api } from '../helpers/helpers'
 import ProfileStack from '../components/ProfileStack'
 export default {
   name: 'Profile',
@@ -15,19 +16,12 @@ export default {
   },
   data () {
     return {
-      visableCards: [
-        {
-          'id': 1,
-          'name': 'Name',
-          'password': 'test123',
-          'email': 'test@example.se',
-          'age': 26,
-          'description': 'test datatest test data test test data test test data test test data',
-          'image': 'imgURL'
-        }
-      ]
+      visableCards: []
     }
-  } 
+  },
+  async mounted () {
+    this.visableCards = await api.getProfiles()
+  }
 }
 </script>
 

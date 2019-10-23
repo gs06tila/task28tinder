@@ -3,7 +3,7 @@
     class="card"
     :class="{ isCurrent: isCurrent }"
   >
-    <h3 class="cardTitle">{{ card.name }}</h3>
+    <h3 class="cardTitle">{{ card }}</h3>
   </div>
 </template>
 
@@ -24,5 +24,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

@@ -16,11 +16,12 @@ export default {
   },
   data () {
     return {
-      visableCards: []
+      visableCards: [],
+      users: []
     }
   },
   async mounted () {
-    this.visableCards = await api.getProfiles()
+    this.users = await api.getProfiles()
   }
 }
 </script>

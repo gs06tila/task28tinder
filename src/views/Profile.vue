@@ -1,8 +1,15 @@
 <template>
   <div>
-    <ProfileStack
-      :cards="visableCards"
-      />
+    <b-container>
+      <b-row>
+        <b-col lg="4" md="3"></b-col>
+        <b-col lg="4" md="6">
+          <ProfileStack
+            :cards="visableCards"
+          />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -21,7 +28,7 @@ export default {
     }
   },
   async mounted () {
-    this.users = await api.getProfiles()
+    this.visableCards = await api.getProfiles()
   }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
-  <div 
+  <div
     class="card"
     :class="{ isCurrent: isCurrent }">
-    <div class="cardcontainer" style="width: 18rem;">
+    <div class="cardcontainer" style="width: 22rem;">
       <img src="../assets/logo.png">
       <div class="card-body">
         <h3 class="card-title">{{ card.name }} {{ card.age }} </h3>
@@ -34,13 +34,10 @@ export default {
   background: whitesmoke;
   border-style: 10px;
   border-color: yellowgreen;
-  margin: auto 0;
-  float: none;
 }
 
-.cards {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.card-body {
+  text-align: center;
 }
+
 </style>

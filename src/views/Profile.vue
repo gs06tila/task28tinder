@@ -16,7 +16,8 @@ export default {
   },
   data () {
     return {
-      visableCards: []
+      visableCards: [],
+      users: []
     }
   },
   async mounted () {

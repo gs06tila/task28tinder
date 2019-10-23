@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="card"
     :class="{ isCurrent: isCurrent }">
     <div class="cardcontainer" style="width: 18rem;">

@@ -21,7 +21,7 @@ export default {
     }
   },
   async mounted () {
-    this.users = await api.getProfiles()
+    this.visableCards = await api.getProfiles()
   }
 }
 </script>

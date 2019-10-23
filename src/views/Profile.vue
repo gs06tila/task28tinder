@@ -1,12 +1,23 @@
 <template>
   <div>
-    <h1>PROFILE</h1>
+    <ProfileStack
+      :cards="visableCards"
+      />
   </div>
 </template>
 
 <script>
+import ProfileStack from '../components/ProfileStack'
 export default {
-  name: 'Profile'
+  name: 'Profile',
+  components: {
+    ProfileStack
+  },
+  data () {
+    return {
+      visableCards: ['Test1']
+    }
+  }
 }
 </script>
 

@@ -18,16 +18,16 @@ export default {
       visableCards: [
         {
           'id': 1,
-          'name': 'test1',
+          'name': 'Name',
           'password': 'test123',
           'email': 'test@example.se',
           'age': 26,
-          'description': 'est test datatest test data test test data test test data test test data',
-          'image': 'imageURL'
+          'description': 'test datatest test data test test data test test data test test data',
+          'image': 'imgURL'
         }
       ]
     }
-  }
+  } 
 }
 </script>
 

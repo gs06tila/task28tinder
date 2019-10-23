@@ -3,7 +3,7 @@
     class="card"
     :class="{ isCurrent: isCurrent }"
   >
-    <h3 class="cardTitle">{{ card }}</h3>
+    <h3 class="cardTitle">{{ card.name }}</h3>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
   name: 'profile',
   props: {
     card: {
-      type: String,
+      type: Object,
       required: true
     },
     isCurrent: {

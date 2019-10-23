@@ -1,9 +1,15 @@
 <template>
-  <div
+  <div 
     class="card"
-    :class="{ isCurrent: isCurrent }"
-  >
-    <h3 class="cardTitle">{{ card }}</h3>
+    :class="{ isCurrent: isCurrent }">
+    <div class="cardcontainer" style="width: 18rem;">
+      <img src="../assets/logo.png">
+      <div class="card-body">
+        <h3 class="card-title">{{ card.name }} {{ card.age }} </h3>
+        <p class="cardDescription"> {{ card.description }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,4 +30,17 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  background: whitesmoke;
+  border-style: 10px;
+  border-color: yellowgreen;
+  margin: auto 0;
+  float: none;
+}
+
+.cards {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>

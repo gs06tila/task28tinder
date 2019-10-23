@@ -2,7 +2,7 @@
   <div class="cards">
     <ProfileCard
       v-for="(card, index) in cards"
-      :key="card"
+      :key="card.id"
       :card="card"
       :is-current="index === 0"
       />
@@ -26,9 +26,5 @@ export default {
 </script>
 
 <style scoped>
-  .cards {
-    display: flex;
-    margin: 50px;
-    width: 300px;
-  }
+
 </style>

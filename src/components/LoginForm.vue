@@ -5,9 +5,7 @@
     </div>
     <hr>
     <b-form @submit.prevent="onSubmit">
-      <b-form-group id="userInputGroup"
-                    label="User Name"
-                    label-for="userInput">
+      <b-form-group id="userInputGroup">
         <b-form-input id="userInput"
                       type="text"
                       placeholder="Enter user name"
@@ -16,9 +14,9 @@
                       required>
         </b-form-input>
         <b-form-input id="userPassword"
-                      type="text"
-                      placeholder="Enter user name"
-                      v-model="userId"
+                      type="password"
+                      placeholder="Enter password"
+                      v-model="userPass"
                       autocomplete="off"
                       required>
         </b-form-input>
@@ -39,12 +37,13 @@ export default {
   name: 'LoginForm',
   data () {
     return {
-      userId: ''
+      userId: '',
+      userPass: ''
     }
   },
   computed: {
     isValid: function () {
-      const result = this.userId.length < 3
+      const result = this.userId.length < 3 && this.userPass < 3
       return result || this.loading
     }
   },

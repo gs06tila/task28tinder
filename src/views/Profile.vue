@@ -1,8 +1,15 @@
 <template>
   <div>
-    <ProfileStack
-      :cards="visableCards"
-      />
+    <b-container>
+      <b-row>
+        <b-col lg="4" md="3"></b-col>
+        <b-col lg="4" md="6">
+          <ProfileStack
+            :cards="visableCards"
+          />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -18,6 +25,14 @@ export default {
     return {
       visableCards: [],
       users: []
+    }
+  },
+  methods: {
+    handleCardAccepted () {
+      console.log('handleCardAccepted')
+    },
+    handleCardRejected () {
+      console.log('handleCardRejected')
     }
   },
   async mounted () {

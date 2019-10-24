@@ -1,12 +1,13 @@
 <template>
-<div class="navbar">
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Hinder
-        </a>
-    </nav>
-</div>
+  <b-navbar toggleable="lg" type="dark" variant="danger">
+    <b-navbar-brand href="#">
+        <div id="nav-container">
+        <img src="../assets/hammer.png" width="10%" height="10%" alt="hammer">
+        <br>Komrad, this is your Hinder profile!<br>
+        A great plattform where you kan meet other komrads!
+        </div>
+        </b-navbar-brand>
+  </b-navbar>
 </template>
 
 <script>
@@ -15,9 +16,8 @@ export default {
 </script>
 
 <style scoped>
-
-nav {
-    color:crimson;
+#nav-container {
+    color: yellow;
+    margin-left: 500px;
 }
-
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navbar />
     <b-container>
       <b-row>
         <b-col lg="4" md="3"></b-col>
@@ -45,5 +46,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

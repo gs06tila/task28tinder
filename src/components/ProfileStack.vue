@@ -5,6 +5,8 @@
         :key="card.id"
         :card="card"
         :is-current="index === currentProfile"
+        @cardAccepted="$emit('cardAccepted')"
+        @cardRejected="$emit('cardRejected')"
         @updateProfile="updateProfile"
       />
   </div>

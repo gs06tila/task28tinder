@@ -13,6 +13,7 @@
 
 <script>
 import RegisterForm from '@/components/RegisterForm.vue'
+import { api } from '../helpers/helpers'
 export default {
   name: 'Register',
   components: {
@@ -20,10 +21,10 @@ export default {
   },
   methods: {
     createProfile: async function (profile) {
-      // eslint-disable-next-line no-undef
+      console.log(profile)
       await api.createProfile(profile)
       this.flash('Profile created', 'success')
-      this.$router.push('login')
+      this.$router.push('/')
     }
   }
 }

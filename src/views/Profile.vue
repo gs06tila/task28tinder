@@ -9,10 +9,13 @@
 <script>
 import { api } from '../helpers/helpers'
 import ProfileStack from '../components/ProfileStack'
+import Navbar from '../components/Navbar'
+
 export default {
   name: 'Profile',
   components: {
-    ProfileStack
+    ProfileStack,
+    Navbar
   },
   data () {
     return {

@@ -8,7 +8,7 @@
       <div class="card-body">
         <h3 class="card-title"> {{ title }} </h3>
         <p class="cardDescription"> {{ description }} </p>
-        <b-button v-on:click="onSubmit(card.id)"
+        <b-button v-on:click="onSubmit()"
                   variant="primary"
                   class="ld-ext-right"
         >
@@ -34,8 +34,7 @@ export default {
     }
   },
   methods: {
-    async onSubmit (index) {
-      console.log(index)
+    async onSubmit () {
       const result = true
       if (result) {
         this.$emit('updateProfile')

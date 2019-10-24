@@ -1,5 +1,6 @@
 <template>
   <div class="login">
+    <flash-message class="myFlash"></flash-message>
     <b-container>
       <b-row>
         <b-col lg="4" md="3"></b-col>

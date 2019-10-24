@@ -1,7 +1,7 @@
 <template>
   <div class="login-form">
     <div class="text-center">
-      <img src="../assets/fly.png" width="152" height="152">
+      <img src="../assets/fly.png" width="172" height="172">
     </div>
     <hr>
     <b-form @submit.prevent="onSubmit">
@@ -12,7 +12,7 @@
         <b-form-input id="userInput"
                       type="text"
                       placeholder="Enter user name"
-                      v-model="profile.userId"
+                      v-model="profile.name"
                       autocomplete="off"
                       required>
         </b-form-input>
@@ -24,7 +24,7 @@
         <b-form-input id="userPassword"
                       type="password"
                       placeholder="Enter password"
-                      v-model="profile.userPass"
+                      v-model="profile.password"
                       autocomplete="off"
                       required>
         </b-form-input>
@@ -36,7 +36,7 @@
         <b-form-input id="userEmail"
                       type="text"
                       placeholder="Enter Email"
-                      v-model="profile.userEmail"
+                      v-model="profile.email"
                       autocomplete="off"
                       required>
         </b-form-input>
@@ -61,9 +61,9 @@ export default {
       required: false,
       default: () => {
         return {
-          userId: '',
-          userPass: '',
-          userEmail: ''
+          name: '',
+          password: '',
+          email: ''
         }
       }
     }
@@ -72,8 +72,8 @@ export default {
     async onSubmit () {
       const result = true
       if (result) {
+        console.log(this.profile)
         this.$emit('createProfile', this.profile)
-        this.$router.push('login')
       }
     }
   }

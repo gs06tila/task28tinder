@@ -4,7 +4,7 @@
     class="card"
     :class="{ isCurrent: isCurrent }">
     <div class="cardcontainer" style="width: 22rem;">
-      <img src="../assets/logo.png">
+      <img :src="image" width="100%">
       <div class="card-body">
         <h3 class="card-title"> {{ title }} </h3>
         <p class="cardDescription"> {{ description }} </p>
@@ -37,6 +37,7 @@ export default {
     async onSubmit () {
       const result = true
       if (result) {
+        this.img = 'image'
         this.$emit('updateProfile')
       }
     }
@@ -47,6 +48,9 @@ export default {
     },
     description () {
       return this.card.description
+    },
+    image () {
+      return this.card.image
     }
   }
 }

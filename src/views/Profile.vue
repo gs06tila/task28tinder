@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="profile">
     <navbar />
     <b-container>
       <b-row>
@@ -48,4 +48,7 @@ export default {
 </script>
 
 <style scoped>
+.profile {
+  background-image: '../assets/komrade.jpg'
+}
 </style>

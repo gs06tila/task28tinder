@@ -18,6 +18,7 @@ export default {
 <style scoped>
 #nav-container {
     color: yellow;
-    margin-left: 500px;
+    margin-right: -1%;
+    transform: translateX(-100%);
 }
 </style>

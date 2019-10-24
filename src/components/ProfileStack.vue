@@ -1,10 +1,11 @@
 <template>
   <div class="cards">
-    <ProfileCard
-      v-for="(card, index) in cards"
-      :key="card.id"
-      :card="card"
-      :is-current="index === 0"
+      <ProfileCard
+        v-for="(card, index) in cards"
+        :key="card.id"
+        :card="card"
+        :is-current="index === currentProfile"
+        @updateProfile="updateProfile"
       />
   </div>
 </template>
@@ -20,6 +21,17 @@ export default {
     cards: {
       type: Array,
       required: true
+    }
+  },
+  data () {
+    return {
+      currentProfile: 0
+    }
+  },
+  methods: {
+    updateProfile () {
+      // this.currentProfile = index
+      this.cards.shift()
     }
   }
 }

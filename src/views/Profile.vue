@@ -27,6 +27,14 @@ export default {
       users: []
     }
   },
+  methods: {
+    handleCardAccepted () {
+      console.log('handleCardAccepted')
+    },
+    handleCardRejected () {
+      console.log('handleCardRejected')
+    }
+  },
   async mounted () {
     this.visableCards = await api.getProfiles()
   }

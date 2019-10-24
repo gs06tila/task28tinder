@@ -19,6 +19,6 @@ export default {
 #nav-container {
     color: yellow;
     margin-right: -1%;
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 </style>

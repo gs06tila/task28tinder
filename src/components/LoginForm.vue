@@ -1,7 +1,7 @@
 <template>
   <div class="login-form">
     <div class="text-center">
-      <img src="../assets/fly.png" width="152" height="152">
+      <img src="../assets/fly.png" width="172" height="172">
     </div>
     <hr>
     <b-form @submit.prevent="onSubmit">

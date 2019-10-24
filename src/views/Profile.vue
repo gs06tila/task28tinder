@@ -7,6 +7,8 @@
         <b-col lg="4" md="6">
           <ProfileStack
             :cards="visableCards"
+            @cardAccepted="handleCardAccepted"
+            @cardRejected="handleCardRejected"
           />
         </b-col>
       </b-row>

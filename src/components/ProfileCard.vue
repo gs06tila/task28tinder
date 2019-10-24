@@ -8,7 +8,7 @@
       <div class="card-body">
         <h3 class="card-title"> {{ title }} </h3>
         <p class="cardDescription"> {{ description }} </p>
-        <b-button v-on:click="onSubmit()"
+        <b-button v-on:click="onSubmit(card.id)"
                   variant="primary"
                   class="ld-ext-right"
         >
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+//import Navbar from '../components/Navbar'
+
 export default {
   name: 'profile',
   props: {
@@ -34,7 +36,8 @@ export default {
     }
   },
   methods: {
-    async onSubmit () {
+    async onSubmit (index) {
+      console.log(index)
       const result = true
       if (result) {
         this.$emit('updateProfile')

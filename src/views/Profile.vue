@@ -1,7 +1,7 @@
 <template>
   <div>
+    <navbar />
     <div class="centerit">
-      <navbar />
       <b-container>
         <b-row>
           <b-col lg="4" md="3"></b-col>

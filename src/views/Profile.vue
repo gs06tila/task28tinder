@@ -1,18 +1,20 @@
 <template>
   <div>
-    <navbar />
-    <b-container>
-      <b-row>
-        <b-col lg="4" md="3"></b-col>
-        <b-col lg="4" md="6">
-          <ProfileStack
-            :cards="visableCards"
-            @cardAccepted="handleCardAccepted"
-            @cardRejected="handleCardRejected"
-          />
-        </b-col>
-      </b-row>
-    </b-container>
+    <div class="centerit">
+      <navbar />
+      <b-container>
+        <b-row>
+          <b-col lg="4" md="3"></b-col>
+          <b-col lg="4" md="6">
+            <ProfileStack
+              :cards="visableCards"
+              @cardAccepted="handleCardAccepted"
+              @cardRejected="handleCardRejected"
+            />
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -48,4 +50,8 @@ export default {
 </script>
 
 <style scoped>
+  .centerit {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
 </style>

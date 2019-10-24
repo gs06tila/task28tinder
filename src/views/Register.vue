@@ -5,7 +5,6 @@
         <b-col lg="4" md="3"></b-col>
         <b-col lg="4" md="6">
           <RegisterForm @createProfile="createProfile" />
-          <h3>Hej</h3>
         </b-col>
       </b-row>
     </b-container>

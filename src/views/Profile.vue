@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="centerit">
+      <navbar />
       <b-container>
         <b-row>
           <b-col lg="4" md="3"></b-col>
@@ -14,17 +15,19 @@
         </b-row>
       </b-container>
     </div>
-
   </div>
 </template>
 
 <script>
 import { api } from '../helpers/helpers'
 import ProfileStack from '../components/ProfileStack'
+import Navbar from '../components/Navbar'
+
 export default {
   name: 'Profile',
   components: {
-    ProfileStack
+    ProfileStack,
+    Navbar
   },
   data () {
     return {

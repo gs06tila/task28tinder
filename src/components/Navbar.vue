@@ -9,8 +9,8 @@
             <img src="../assets/hammer.png" width="50px" height="50px" alt="hammer">
           </div>
           <div id="textNav">
-            <p>Komrad, this is your Hinder profile!<br>
-            A great plattform where you kan meet other komrads!</p>
+            <p>Komrad, dis is your Hinder profile!<br>
+            A kreat plattform where you kan meet other komrads!</p>
           </div>
         </div>
         </b-navbar-brand>

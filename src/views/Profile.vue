@@ -1,27 +1,33 @@
 <template>
   <div>
-    <b-container>
-      <b-row>
-        <b-col lg="4" md="3"></b-col>
-        <b-col lg="4" md="6">
-          <ProfileStack
-            :cards="visableCards"
-            @cardAccepted="handleCardAccepted"
-            @cardRejected="handleCardRejected"
-          />
-        </b-col>
-      </b-row>
-    </b-container>
+    <navbar />
+    <div class="centerit">
+      <b-container>
+        <b-row>
+          <b-col lg="4" md="3"></b-col>
+          <b-col lg="4" md="6">
+            <ProfileStack
+              :cards="visableCards"
+              @cardAccepted="handleCardAccepted"
+              @cardRejected="handleCardRejected"
+            />
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
 <script>
 import { api } from '../helpers/helpers'
 import ProfileStack from '../components/ProfileStack'
+import Navbar from '../components/Navbar'
+
 export default {
   name: 'Profile',
   components: {
-    ProfileStack
+    ProfileStack,
+    Navbar
   },
   data () {
     return {
@@ -44,5 +50,8 @@ export default {
 </script>
 
 <style scoped>
-
+  .centerit {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
 </style>

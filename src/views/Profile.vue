@@ -11,6 +11,7 @@
               @cardAccepted="handleCardAccepted"
               @cardRejected="handleCardRejected"
             />
+            <flash-message class="myFlash"></flash-message>
           </b-col>
         </b-row>
       </b-container>
@@ -37,9 +38,11 @@ export default {
   },
   methods: {
     handleCardAccepted () {
+      this.flash('Komrad Accepted', 'success')
       console.log('handleCardAccepted')
     },
     handleCardRejected () {
+      this.flash('Komrad Rejected', 'error')
       console.log('handleCardRejected')
     }
   },
@@ -52,7 +55,7 @@ export default {
 <style scoped>
   .centerit {
     margin-top: 25%;
-    transform: translateY(-50%);
+    transform: translateY(-60%);
   }
   .profile {
     background-image: url('https://i.imgur.com/Gu7GuiH.jpg');

@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="profile">
+    <navbar />
     <div class="centerit">
-      <navbar />
       <b-container>
         <b-row>
           <b-col lg="4" md="3"></b-col>
@@ -53,5 +53,12 @@ export default {
   .centerit {
     margin-top: 25%;
     transform: translateY(-50%);
+  }
+  .profile {
+    background-image: url('https://i.imgur.com/Gu7GuiH.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
   }
 </style>

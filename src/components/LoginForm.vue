@@ -21,14 +21,20 @@
                       required>
         </b-form-input>
       </b-form-group>
-
-      <b-button type="submit"
-                variant="primary"
-                class="ld-ext-right"
-                :disabled="isValid">
-        Login <div class="ld ld-ring ld-spin"></div>
-      </b-button>
     </b-form>
+    <b-button v-on:click="onSubmit"
+              type="submit"
+              variant="danger"
+              class="ld-ext-right"
+              :disabled="isValid">
+      Login <div class="ld ld-ring ld-spin"></div>
+    </b-button>
+    <b-button v-on:click="registerBtn()"
+              type="submit"
+              variant="danger"
+              class="ld-ext-left">
+      Register <div class="ld ld-ring ld-spin"></div>
+    </b-button>
   </div>
 </template>
 
@@ -43,8 +49,8 @@ export default {
   },
   computed: {
     isValid: function () {
-      const result = this.userId.length < 3 && this.userPass < 3
-      return result || this.loading
+      const result = this.userId.length && this.userPass < 3
+      return result
     }
   },
   methods: {
@@ -53,6 +59,9 @@ export default {
       if (result) {
         this.$router.push('profile')
       }
+    },
+    registerBtn () {
+      this.$router.push('register')
     }
   }
 }
@@ -62,5 +71,8 @@ export default {
   .login-form {
     margin-top: 100%;
     transform: translateY(-50%);
+  }
+  .btnlogin {
+    margin-left: 0px;
   }
 </style>

@@ -3,25 +3,31 @@
     v-if="isCurrent"
     class="card"
     :class="{ isCurrent: isCurrent }">
-    <div class="cardcontainer" style="width: 22rem;">
-      <img :src="image" width="100%">
+    <div class="cardcontainer" style="width: 100%;">
+      <img :src="image" width="100%" height="464px">
       <div class="card-body">
         <h3 class="card-title"> {{ title }} </h3>
         <p class="cardDescription"> {{ description }} </p>
-        <b-button v-on:click="onSubmit()"
+        <b-button v-on:click="accepted()"
                   variant="primary"
                   class="ld-ext-right"
         >
-          GoGOGO <div class="ld ld-ring ld-spin"></div>
+          Accept <div class="ld ld-ring ld-spin"></div>
         </b-button>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <b-button v-on:click="rejected()"
+                  variant="primary"
+                  class="ld-ext-right"
+        >
+          Reject <div class="ld ld-ring ld-spin"></div>
+        </b-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import Navbar from '../components/Navbar'
+const ACCEPT_CARD = 'cardAccepted'
+const REJECT_CARD = 'cardRejected'
 
 export default {
   name: 'profile',
@@ -36,10 +42,17 @@ export default {
     }
   },
   methods: {
-    async onSubmit () {
+    async accepted () {
       const result = true
       if (result) {
-        this.img = 'image'
+        this.$emit(ACCEPT_CARD)
+        this.$emit('updateProfile')
+      }
+    },
+    async rejected () {
+      const result = true
+      if (result) {
+        this.$emit(REJECT_CARD)
         this.$emit('updateProfile')
       }
     }

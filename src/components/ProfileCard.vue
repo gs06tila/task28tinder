@@ -9,16 +9,16 @@
         <h3 class="card-title"> {{ title }} </h3>
         <p class="cardDescription"> {{ description }} </p>
         <b-button v-on:click="accepted()"
-                  variant="primary"
+                  variant="success"
                   class="ld-ext-right"
         >
-          Accept <div class="ld ld-ring ld-spin"></div>
+          да <font-awesome-icon icon="check-circle" /><div class="ld ld-ring ld-spin"></div>
         </b-button>
         <b-button v-on:click="rejected()"
-                  variant="primary"
+                  variant="danger"
                   class="ld-ext-right"
         >
-          Reject <div class="ld ld-ring ld-spin"></div>
+          нет <font-awesome-icon icon="ambulance" /> <div class="ld ld-ring ld-spin"></div>
         </b-button>
       </div>
     </div>
@@ -75,7 +75,7 @@ export default {
 .card {
   background: whitesmoke;
   border-style: 10px;
-  border-color: yellowgreen;
+  border-color: maroon;
 }
 
 .card-body {

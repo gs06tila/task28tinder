@@ -3,7 +3,7 @@
     v-if="isCurrent"
     class="card"
     :class="{ isCurrent: isCurrent }">
-    <div class="cardcontainer" style="width: 22rem;">
+    <div class="cardcontainer" style="width: 100%;">
       <img :src="image" width="100%">
       <div class="card-body">
         <h3 class="card-title"> {{ title }} </h3>

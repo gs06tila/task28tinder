@@ -3,7 +3,7 @@
     <b-navbar-brand class="nav" href="#">
         <div id="nav-container">
           <div class="navImg">
-            <img src="../assets/hammer.png" width="40px" height="40px" alt="hammer">
+            <img src="../assets/hammer.png" width="50px" height="50px" alt="hammer">
           </div>
           <div id="textNav">
             <p>Komrad, this is your Hinder profile!<br>
@@ -21,11 +21,13 @@ export default {
 
 <style scoped>
   #nav-container {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 25px;
     color: yellow;
     width: 100%;
     height: 100%;
     margin-left: 100%;
-    transform: translateX(50%);
+    transform: translateX(25%);
   }
   #textNav {
     text-align: center;

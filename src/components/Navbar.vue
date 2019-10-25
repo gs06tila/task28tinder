@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" type="dark" variant="danger">
+  <b-navbar class="navbar" toggleable="lg" type="dark" variant="danger">
     <b-navbar-brand class="nav" href="#">
         <div id="nav-container">
           <div class="navImg">
@@ -32,5 +32,8 @@ export default {
   }
   .navImg {
     text-align: center;
+  }
+  .navbar {
+    background: linear-gradient(46.14deg, #F5734C 36.18%, #E5C380 93.64%), #E4CE9D;
   }
 </style>

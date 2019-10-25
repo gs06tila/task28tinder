@@ -1,6 +1,9 @@
 <template>
   <b-navbar class="navbar" toggleable="lg" type="dark" variant="danger">
-    <b-navbar-brand class="nav" href="#">
+    <b-navbar-brand href="/userProfile">
+      User Profile
+    </b-navbar-brand>
+    <b-navbar-brand class="nav" href="/profile">
         <div id="nav-container">
           <div class="navImg">
             <img src="../assets/hammer.png" width="50px" height="50px" alt="hammer">
@@ -26,7 +29,7 @@ export default {
     color: yellow;
     width: 100%;
     height: 100%;
-    margin-left: 100%;
+    margin-left: 75%;
     transform: translateX(25%);
   }
   #textNav {

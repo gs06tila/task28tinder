@@ -1,18 +1,20 @@
 <template>
-  <div id="profile">
+  <div class="profile">
     <navbar />
-    <b-container>
-      <b-row>
-        <b-col lg="4" md="3"></b-col>
-        <b-col lg="4" md="6">
-          <ProfileStack
-            :cards="visableCards"
-            @cardAccepted="handleCardAccepted"
-            @cardRejected="handleCardRejected"
-          />
-        </b-col>
-      </b-row>
-    </b-container>
+    <div class="centerit">
+      <b-container>
+        <b-row>
+          <b-col lg="4" md="3"></b-col>
+          <b-col lg="4" md="6">
+            <ProfileStack
+              :cards="visableCards"
+              @cardAccepted="handleCardAccepted"
+              @cardRejected="handleCardRejected"
+            />
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -48,7 +50,15 @@ export default {
 </script>
 
 <style scoped>
-.profile {
-  background-image: '../assets/komrade.jpg'
-}
+  .centerit {
+    margin-top: 25%;
+    transform: translateY(-50%);
+  }
+  .profile {
+    background-image: url('https://i.imgur.com/Gu7GuiH.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
 </style>

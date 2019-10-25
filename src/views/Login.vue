@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
   .login {
-    background-image: url('https://mdbootstrap.com/img/Photos/Others/images/93.jpg');
+    background-image: url('https://i.imgur.com/Gu7GuiH.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

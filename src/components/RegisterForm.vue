@@ -44,13 +44,14 @@
     </b-form>
     <b-button v-on:click="onSubmit()"
               type="submit"
-              variant="primary"
-              class="ld-ext-left">
+              variant="danger"
+              class="ld-ext-left"
+              :disabled="isValid">
       Register <div class="ld ld-ring ld-spin"></div>
     </b-button>
     <b-button v-on:click="loginBtn()"
               type="submit"
-              variant="primary"
+              variant="danger"
               class="ld-ext-right">
       Login <div class="ld ld-ring ld-spin"></div>
     </b-button>
@@ -71,6 +72,12 @@ export default {
           email: ''
         }
       }
+    }
+  },
+  computed: {
+    isValid: function () {
+      const result = this.profile.name.length && this.profile.password && this.profile.email < 3
+      return result
     }
   },
   methods: {

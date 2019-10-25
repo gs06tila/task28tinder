@@ -24,14 +24,14 @@
     </b-form>
     <b-button v-on:click="onSubmit"
               type="submit"
-              variant="primary"
+              variant="danger"
               class="ld-ext-right"
               :disabled="isValid">
       Login <div class="ld ld-ring ld-spin"></div>
     </b-button>
     <b-button v-on:click="registerBtn()"
               type="submit"
-              variant="primary"
+              variant="danger"
               class="ld-ext-left">
       Register <div class="ld ld-ring ld-spin"></div>
     </b-button>
@@ -49,8 +49,8 @@ export default {
   },
   computed: {
     isValid: function () {
-      const result = this.userId.length < 3 && this.userPass < 3
-      return result || this.loading
+      const result = this.userId.length && this.userPass < 3
+      return result
     }
   },
   methods: {
